@@ -7,7 +7,7 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "@/004_props/App.tsx";
+import { App } from "@/complex/sidebar/App.tsx";
 
 const elem = document.getElementById("root")!;
 const app = (
