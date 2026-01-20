@@ -7,7 +7,7 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "@/complex/cards/App.tsx";
+import { App } from "@/004_props/App.tsx";
 import {CssBaseline} from "@mui/material";
 
 const elem = document.getElementById("root")!;

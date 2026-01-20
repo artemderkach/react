@@ -1,12 +1,4 @@
-
-interface AvatarProps {
-    person: PersonProps
-    size: number
-}
-interface PersonProps {
-    name: string
-    imageId: string
-}
+import type {AvatarProps} from "./Avatar.tsx";
 
 function Avatar({person, size}: AvatarProps) {
     return (

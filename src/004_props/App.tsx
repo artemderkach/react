@@ -1,4 +1,4 @@
-import Profile from "./Profile.tsx";
+import {Profile} from "./ProfileChildren.tsx";
 
 
 export function App() {

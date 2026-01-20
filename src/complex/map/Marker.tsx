@@ -19,18 +19,19 @@ interface MapMarkerProps {
 
 export function MapMarker({marker, setMarkerMenu, index}: MapMarkerProps) {
     const map = useMap()
+    const eventHandler = () => {
+        const point = map.latLngToContainerPoint(marker)
+        const rect = map.getContainer().getBoundingClientRect();
+
+        setMarkerMenu({
+            mouseX: rect.left + point.x,
+            mouseY: rect.top + point.y,
+        })
+    }
 
     return (
         <Marker key={index} position={marker} icon={markerCustomIcon} eventHandlers={{
-            click: (e) => {
-                const point = map.latLngToContainerPoint(marker)
-                const rect = map.getContainer().getBoundingClientRect();
-
-                setMarkerMenu({
-                    mouseX: rect.left + point.x,
-                    mouseY: rect.top + point.y,
-                })
-            }
+            click: eventHandler
         }}>
             <Popup key={index}>
                 {marker[0]}, {marker[1]}, {index} <br/>
